@@ -21,4 +21,14 @@ ref  : 'origin/main',
 
 8. pm2 deploy production 하면 비번 입력 많이해야하긴한데 적었던 post-deploy에 있던게 죄다 원격에서 실행된다
 
+
+
 9. 서버에가서 pm2 list 하면 인스턴스가 떠있다
+
+10. 비번 계속쳐야되는데 비번 옵션으로 설정되냐고 누가물어봤는데
+none, use a keyfile instead ^^
+
+11. 루트안에 /current, /shared, /source가 있는데
+작업을 때리는곳은 /current인데 symLink가 /source에 걸려있어서
+echo $PWD 하면 /home/next-sjh.kro.kr/nextjs/current 나오는데
+결국 /source에 모든 소스가 생긴다
