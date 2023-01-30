@@ -13,7 +13,7 @@ module.exports = {
       path : '/home/next-sjh.kro.kr/nextjs',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && npm run build &&  pm2 reload ecosystem.config.js --env production',
-      'pre-setup': '',
+      'pre-setup': 'echo $PWD >> ii2.txt',
       'ssh_options': 'ForwardAgent=yes'
     }
   }
