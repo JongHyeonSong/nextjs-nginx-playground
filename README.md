@@ -10,3 +10,13 @@ nextjs를 nginx와함께 pm2를 이용해서 배포하기
 2. 이아저씨는 ssh 키가지고 이것저것하는데 나는 모르겟다~~
 
 3. 원격에 이제 접속안해도됨!
+
+4. 중간에 역경이 몇개있는데 일단 public 해야되고
+
+6. 그다음 기본설정에 upstream이 master로 되어있는데 그거 흑인때문에 안되고 이제 main으로 보통만들어짐
+ref  : 'origin/main',
+
+
+7. pm2 deploy production setup 딱치고 대박좀 넣어주면 깃의 소스가 죄다 /home/next-sjh.kro.kr/nextjs/ 아래에 특히 거기서 source폴더안에 다생성된다
+
+8. pm2 deploy production
