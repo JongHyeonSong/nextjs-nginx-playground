@@ -1,22 +1,20 @@
 module.exports = {
   apps : [{
-    script: 'index.js',
-    watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
+    script: 'npm start',
   }],
 
   deploy : {
     production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
+      user : 'root',
+      password : 'eoqkr!@34',
+      host : '210.180.118.158',
       ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
+      repo : 'https://github.com/JongHyeonSong/nextjs-nginx-playground.git', 
+      path : '/home/ubuntu',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      'post-deploy' : 'npm install && npm run build &&  pm2 reload ecosystem.config.js --env production',
+      'pre-setup': '',
+      'ssh_options': 'ForwardAgent=yes'
     }
   }
 };
