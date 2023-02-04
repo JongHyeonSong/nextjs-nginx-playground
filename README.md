@@ -17,7 +17,7 @@ nextjs를 nginx와함께 pm2를 이용해서 배포하기
 ref  : 'origin/main',
 
 
-7. pm2 deploy production setup 딱치고 대박좀 넣어주면 깃의 소스가 죄다 /home/next-sjh.kro.kr/nextjs/ 아래에 특히 거기서 source폴더안에 다생성된다
+7. pm2 deploy production setup(pm2 deploy ecosystem.cofing.js production setup) 딱치고 대박좀 넣어주면 깃의 소스가 죄다 /home/next-sjh.kro.kr/nextjs/ 아래에 특히 거기서 source폴더안에 다생성된다
 
 8. pm2 deploy production 하면 비번 입력 많이해야하긴한데 적었던 post-deploy에 있던게 죄다 원격에서 실행된다
 

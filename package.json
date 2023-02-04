@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3333",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pm2:setup": "pm2 deploy production setup",
+    "pm2:dep": "pm2 deploy production"
   },
   "dependencies": {
     "@next/font": "13.1.6",
     "next": "13.1.6",
+    "pm2": "^5.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }

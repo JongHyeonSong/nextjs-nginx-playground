@@ -15,6 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1> <a href="https://next-sjh.kro.kr/">https://next-sjh.kro.kr/</a> </h1>
+        <h1> <a href="https://next-sjh.kro.kr/sowhat">https://next-sjh.kro.kr/sowhat</a> </h1>
+
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
