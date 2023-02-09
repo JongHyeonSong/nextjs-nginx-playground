@@ -25,7 +25,7 @@ ref  : 'origin/main',
 8. pm2 deploy production 하면 비번 입력 많이해야하긴한데 적었던 post-deploy에 있던게 죄다 원격에서 실행된다
 
 
-
+eoqkr!@34
 9. 서버에가서 pm2 list 하면 인스턴스가 떠있다
 
 10. 비번 계속쳐야되는데 비번 옵션으로 설정되냐고 누가물어봤는데
