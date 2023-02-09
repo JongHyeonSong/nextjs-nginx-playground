@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start -p 3333",
     "lint": "next lint",
+    "build:ssg": "next build && next export",
+    "RR":"next export",
     "pm2:setup": "pm2 deploy production setup",
     "pm2:dep": "pm2 deploy production"
   },

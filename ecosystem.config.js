@@ -1,6 +1,7 @@
 module.exports = {
   apps : [{
     script: 'npm start',
+    name: "nextjs-nginx-playground",
   }],
 
   deploy : {

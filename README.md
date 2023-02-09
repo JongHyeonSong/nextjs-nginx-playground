@@ -35,3 +35,31 @@ none, use a keyfile instead ^^
 작업을 때리는곳은 /current인데 symLink가 /source에 걸려있어서
 echo $PWD 하면 /home/next-sjh.kro.kr/nextjs/current 나오는데
 결국 /source에 모든 소스가 생긴다
+
+
+
+12. SSG 배포
+1. next build 하면 out폴더에 먼가 스크립트 잔뜩생김
+2. next export를 해야 1에서 생긴 js기반으로 실제 html을 찍어내는거같음
+
+
+3. Error: Image Optimization using Next.js' default loader is not compatible with `next export`.
+에러 발생시
+```
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    unoptimized: true
+  },
+}
+```
+
+4. 이제 그냥 정적 html로 쓰면댐 ㅇㅇ
+
+5. 소스보니까 
+```
+    <script id="__NEXT_DATA__" type="application/json">
+      { "props": { "pageProps": { "data": { "id": 8811, "uid": "8d069500-80ff-4537-a070-e3dc3d6f0c0e", "brand": "Patagonia", "name": "Bell’s Expedition", "style": "Belgian And French Ale", "hop": "Mosaic", "yeast": "5335 - Lactobacillus", "malts": "Munich", "ibu": "36 IBU", "alcohol": "7.5%", "blg": "18.8°Blg" } }, "__N_SSG": true }, "page": "/sowhat", "query": {}, "buildId": "zuV8M5Ek-K9JIrXX4R86v", "isFallback": false, "gsp": true, "scriptLoader": [] }
+    </script>
+```
+이런식으로 props의 데이터를 json으로 그냥 갖고잇는듯
